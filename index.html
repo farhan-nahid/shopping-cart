@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Shopping Cart -JAVASCRIPT(DOM)</title>
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <!-- bootstrap css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="cart">
+            <div class="col-md-12 col-lg-10 mx-auto">
+              <!-- phone section start -->
+              <div class="cart-item">
+                <div class="row">
+                  <div class="col-md-7 center-item">
+                    <img src="assets/img/product-1.png" alt="iphone-11" />
+                    <h5>iPhone 11 128GB Black</h5>
+                  </div>
+
+                  <div class="col-md-5 center-item">
+                    <div class="input-group number-spinner">
+                      <button id="phone__decrement" class="btn btn-danger">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input
+                        type="text"
+                        id="phone__count"
+                        class="form-control text-center"
+                        value="1"
+                        disabled
+                      />
+                      <button id="phone__increment" class="btn btn-success">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <h5 id="phone__prize">$1219</h5>
+                    <img
+                      src="assets/img/remove.png"
+                      alt="remove phone"
+                      class="remove-item"
+                      title="Remove This Product"
+                      onclick="hideProduct(event)"
+                    />
+                  </div>
+                </div>
+                <p id="phone__error"></p>
+              </div>
+              <!-- phone section end -->
+
+              <!-- case section start -->
+              <div class="cart-item">
+                <div class="row">
+                  <div class="col-md-7 center-item mx-auto">
+                    <img src="assets/img/product-2.png" alt="iPhone case" />
+                    <h5>iPhone 11 Silicone Case - Black</h5>
+                  </div>
+                  <div class="col-md-5 center-item">
+                    <div class="input-group number-spinner">
+                      <button id="case__decrement" class="btn btn-danger">
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <input
+                        type="text"
+                        id="case__count"
+                        class="form-control text-center"
+                        value="1"
+                        disabled
+                      />
+                      <button id="case__increment" class="btn btn-success">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <h5 id="case__prize">$59</h5>
+                    <img
+                      src="assets/img/remove.png"
+                      alt="remove"
+                      class="remove-item"
+                      title="Remove This Product"
+                      onclick="hideProduct(event)"
+                    />
+                  </div>
+                </div>
+                <p id="case__error"></p>
+              </div>
+              <!-- case section start -->
+
+              <!-- grand total section start -->
+              <div class="cart-item">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h5>Subtotal :</h5>
+                    <h5>Tax (10%) :</h5>
+                    <h5>Total :</h5>
+                  </div>
+
+                  <div class="col-md-4 status">
+                    <h5 id="total__subtotal">$1,278</h5>
+                    <h5 id="total__tax">$128</h5>
+                    <h5 id="total__cost">$1406</h5>
+                  </div>
+                </div>
+              </div>
+              <!-- grand total section end -->
+
+              <!-- check out button -->
+              <div class="col-md-12 pt-4 pb-4">
+                <button
+                  id="check__out__button"
+                  type="button"
+                  class="btn btn-success check-out"
+                >
+                  Check Out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- bootstrap js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- custom js -->
+    <script src="assets/custom.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
